@@ -537,7 +537,7 @@ def test_2_3_3(rotation_invariant, find_contour, apply_rotation, compute_descrip
     )
     
 
-def test_2_3_4(scaling_invariant, find_contour, apply_scaling, compute_descriptor_padding, linear_interpolation,images_p_a, feat_t_a, feat_a):
+def test_2_3_4(scaling_invariant, find_contour, apply_scaling, compute_descriptor_padding, linear_interpolation,images_p_a, feat_a):
 
     '''
     Test function for exercise 2.3.4
@@ -555,7 +555,7 @@ def test_2_3_4(scaling_invariant, find_contour, apply_scaling, compute_descripto
     b = scaling_invariant(feat_s_a)
 
     # Compute errors
-    error_no_corr = np.abs(feat_a - feat_t_a).mean()
+    error_no_corr = np.abs(feat_a - feat_s_a).mean()
     error_corr = np.abs(a - b).mean()
     # Print averaged error before
     print("Scaling error: {:.2f}".format(error_no_corr))
